@@ -59,8 +59,7 @@ A supplychain smart contract written in Solidity and deployed on the Rinkeby tes
 ### Quick Start
     npm install
     truffle compile
-    truffle migrate --network development  --reset --all / truffle migrate --network rinkeby  --reset --all
-    truffle test
+    truffle migrate --network development  --reset --all / truffle migrate --network goerli  --reset
     npm run dev
 ****
 **Project Details**  
@@ -69,6 +68,4 @@ Solidity v0.5.0 (solc-js)
 Node v11.1.0  
 Web3.js v1.0.0-beta.37  
 ****
-**Contract Details**  
-Transaction ID: 0x02d11d988959b9dd5f829bc7021f8bee5a0612d5ba0138e954016ead6f44953f  
-Contract Address: 0x244EA5077Ee786F7ba4a0cfeBF1682FCF8Ab813E  
+
