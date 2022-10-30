@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Trade Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Fair Trade Coffee</h1>
+        <hr>
+        <p style="text-align: center;">Prove the authenticity of coffee using the Ethereum blockchain.</p>
+    </div>
+
+    <div class="ftc-role">
+        <h2>Add Address to Roles</h2>
+        <div class="form-group">
+            Farmer
+            <br>
+            <input type="text" id="farmerID" name="farmerID" size="50"><br>
+            Distributor
+            <br>
+            <input type="text" id="distributorID" name="distributorID" size="50"><br>
+            Retailer
+            <br>
+            <input type="text" id="retailerID" name="retailerID" size="50"><br>
+            Consumer
+            <br>
+            <input type="text" id="consumerID" name="consumerID" size="50"><br>
+            <div class=button-div>
+                <button class="btn-addFarmer"      id="button" type="button" data-id="11">Add Farmer</button>
+                <button class="btn-addDistributor" id="button" type="button" data-id="12">Add Distributor</button>
+                <button class="btn-addRetailer"    id="button" type="button" data-id="13">Add Retailer</button>
+                <button class="btn-addConsumer"    id="button" type="button" data-id="14">Add Consumer</button>
+            </div>
+            <div id = "roleResultBuffer">
+            </div>
+        </div>
+    </div>
+
+    <div id="ftc-harvest">
+
+        <h2>Validate the authenticity of the product</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="upc" name="upc" value=1><br>
+            <div class=button-div>
+                <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button>
+                <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button>
+            </div>
+            <div id="blockInfoBuffer"></div>
+        </div>
+
+        <div class=form-break></div>
+
+        <h2>Farmer Harvest Item(ONLY FARMER)</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="harvestupc" name="upc" value=1><br>
+            Farm Name
+            <br>
+            <input type="text" id="originFarmName" name="originFarmName" value="John Doe"><br>
+            Farm Information
+            <br>
+            <input type="text" id="originFarmInformation" name="originFarmInformation" value="Yarra Valley"><br>
+            Farm Latitude
+            <br>
+            <input type="text" id="originFarmLatitude" name="originFarmLatitude" value="-38.239770"><br>
+            Farm Longitude
+            <br>
+            <input type="text" id="originFarmLongitude" name="originFarmLongitude" value="144.341490"><br>
+            Product Notes
+            <br>
+            <input type="text" id="productNotes" name="productNotes" value="Best beans for Espresso" size="60"><br>
+            <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
+            <div id = "harvestResultBuffer">
+            </div>
+        </div>
+
+        <h2>Farmer Process Item(ONLY FARMER)</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="processupc" name="upc" value=1><br>
+            <button class="btn-process" id="button" type="button" data-id="2">Process</button>
+            <div id = "processResultBuffer">
+            </div>            
+        </div>
+
+        <h2>Farmer Pack Item(ONLY FARMER)</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="packupc" name="upc" value=1><br>
+            <button class="btn-pack" id="button" type="button" data-id="3">Pack</button>
+            <div id = "packResultBuffer">
+            </div>               
+        </div>
+
+        <h2>Farmer Sell Item(ONLY FARMER)</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="sellupc" name="upc" value=1><br>
+            Product Price
+            <br>
+            <input type="number" id="productPrice" name="productPrice" value=1>ETH<br>
+            <button class="btn-forsale" id="button" type="button" data-id="4">ForSale</button>
+            <div id = "sellResultBuffer">
+            </div>            
+        </div>
+
+        <div class=form-break></div>
+
+        <h2>Distirbutor buy Item(ONLY Distirbutor)</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="buyupc" name="upc" value=1><br>
+            <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
+            <div id = "buyResultBuffer">
+            </div>               
+        </div>
+
+        <h2>Distirbutor ship Item(ONLY Distirbutor)</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="shipupc" name="upc" value=1><br>
+            <button class="btn-ship" id="button" type="button" data-id="6">Ship</button>
+            <div id = "shipResultBuffer">
+            </div>             
+        </div>
+
+        <div class=form-break></div>
+
+        <h2>Retailer receive Item(ONLY Retailer)</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="receiveupc" name="upc" value=1><br>
+            <button class="btn-receive" id="button" type="button" data-id="7">Receive</button>
+            <div id = "receiveResultBuffer">
+            </div>             
+        </div>
+
+        <div class=form-break></div>
+
+        <h2>Consumer purchase Item(ONLY Consumer)</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="purchaseupc" name="upc" value=1><br>
+            <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
+            <div id = "purchaseResultBuffer">
+            </div>             
+        </div>
+    </div>
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="js/web3.min.js"></script> -->
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
