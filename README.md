@@ -1,6 +1,6 @@
 # SupplyChain-Coffee-Ethereum
 **Ethereum Project - Coffee Supply Chain**  
-A supplychain smart contract written in Solidity and deployed on the Rinkeby test network. This Smart contract demonstrates how supplychains can improve authenticity, efficiency and privacy between seller and buyer.
+A supplychain smart contract written in Solidity and deployed on the Rinkeby test network. This Smart contract demonstrates how supplychains can improve authenticity, efficiency and privacy between seller and buyer. updated testnet version from https://github.com/DavidCLi/SupplyChain-Coffee-Ethereum
 ****
 ### Steps:
 1. There are 4 roles: Farmer, Distributor, Retailer, and Consumer
